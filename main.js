@@ -219,7 +219,7 @@ stationForm.addEventListener("submit", (event) => {
 
 function tweet(railway, station) {
   window.open(
-    `https://x.com/intent/tweet?text=今日の駅は${railway}の『${station}』です！&url=https://dl.wmsci.com/station-picker/`
+    `https://x.com/intent/tweet?text=今日の駅は${railway}の『${station}』です！&url=https://dl.wmsci.com/station/`
   );
 }
 
