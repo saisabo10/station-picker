@@ -148,13 +148,86 @@ const chibaRailways = {
       },
     ],
   },
+  hs: {
+    id: "hs",
+    name: "北総鉄道",
+    railway: [
+      {
+        name: "北総線",
+        id: "hs",
+        icon: "hokso/hs",
+      },
+    ],
+  },
+  km: {
+    id: "km",
+    name: "小湊鉄道",
+    railway: [
+      {
+        name: "小湊鉄道線",
+        id: "km",
+        icon: "kominato/kominato",
+      },
+    ],
+  },
+  "yu-kari": {
+    id: "yu-kari",
+    name: "ユーカリが丘線",
+    railway: [
+      {
+        name: "ユーカリが丘線",
+        id: "yu-kari",
+        icon: "yu-kari/square",
+      },
+    ],
+  },
+  tr: {
+    id: "tr",
+    name: "東葉高速鉄道",
+    railway: [
+      {
+        name: "東葉高速線",
+        id: "tr",
+        icon: "toyo/tr",
+      },
+    ],
+  },
+  is: {
+    id: "is",
+    name: "いすみ鉄道",
+    railway: [
+      {
+        name: "いすみ線",
+        id: "is",
+        icon: "isumi/isumi",
+      },
+    ],
+  },
+  cd: {
+    id: "cd",
+    name: "銚子電気鉄道",
+    railway: [
+      {
+        name: "銚子電気鉄道線",
+        id: "cd",
+        icon: "cd/cd",
+      },
+    ],
+  },
 };
 
 const flattenChibaRailways = Object.values(chibaRailways).flatMap((railway) => {
-  return railway.railway.map((station) => ({
-    id: `${railway.id}-${station.id}`,
-    name: `${railway.name}-${station.name}`,
-  }));
+  if (railway.railway.length === 1 && railway.id !== "tb") {
+    return railway.railway.map((station) => ({
+      id: station.id,
+      name: station.name,
+    }));
+  } else {
+    return railway.railway.map((station) => ({
+      id: `${railway.id}-${station.id}`,
+      name: `${railway.name}-${station.name}`,
+    }));
+  }
 });
 
 const railwayTemplate = (railway, key) => `
@@ -176,14 +249,16 @@ const stationTemplate = (station, key) => `
 
 Object.keys(chibaRailways).forEach((key) => {
   const railway = chibaRailways[key];
-  const railwayElement = document.getElementById(key);
-  let railwayElements = "";
-  railwayElements += '<div class="ml-4 text-lg">';
-  railway.railway.forEach((station) => {
-    railwayElements += railwayTemplate(station, key);
-  });
-  railwayElements += "</div>";
-  railwayElement.innerHTML += railwayElements;
+  if (railway.railway.length !== 1 || railway.id === "tb") {
+    const railwayElement = document.getElementById(key);
+    let railwayElements = "";
+    railwayElements += '<div class="ml-4 text-lg">';
+    railway.railway.forEach((station) => {
+      railwayElements += railwayTemplate(station, key);
+    });
+    railwayElements += "</div>";
+    railwayElement.innerHTML += railwayElements;
+  }
 });
 
 const chibaToggle = document.getElementById("chiba-toggle");
