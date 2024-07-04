@@ -537,6 +537,80 @@ const jrStations = {
       id: "choshi",
     },
   ],
+  "jr-keiyo": [
+    {
+      name: "蘇我",
+      id: "soga",
+    },
+    {
+      name: "千葉みなと",
+      id: "chiba-minato",
+    },
+    {
+      name: "稲毛海岸",
+      id: "inagekaigan",
+    },
+    {
+      name: "検見川浜",
+      id: "kemigawahama",
+    },
+    {
+      name: "海浜幕張",
+      id: "kaihimmakuhari",
+    },
+    {
+      name: "幕張豊砂",
+      id: "makuhari-toyosuna",
+    },
+    {
+      name: "新習志野",
+      id: "shin-narashino",
+    },
+    {
+      name: "南船橋",
+      id: "minami-funabashi",
+    },
+    {
+      name: "二俣新町",
+      id: "futamatashinmachi",
+    },
+    {
+      name: "市川塩浜",
+      id: "ichikawashiohama",
+    },
+    {
+      name: "新浦安",
+      id: "shin-urayasu",
+    },
+    {
+      name: "舞浜",
+      id: "maihama",
+    },
+    {
+      name: "葛西臨海公園",
+      id: "kasairinkaikoen",
+    },
+    {
+      name: "新木場",
+      id: "shinkiba",
+    },
+    {
+      name: "潮見",
+      id: "shiomi",
+    },
+    {
+      name: "越中島",
+      id: "echujima",
+    },
+    {
+      name: "八丁堀",
+      id: "hatchobori",
+    },
+    {
+      name: "東京",
+      id: "tokyo",
+    },
+  ],
 };
 
 Object.keys(jrStations).forEach((key) => {

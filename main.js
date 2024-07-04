@@ -4,6 +4,26 @@ const chibaRailways = {
     name: "JR東日本",
     railway: [
       {
+        name: "総武線",
+        id: "soubu",
+        icon: "jr/jb",
+      },
+      {
+        name: "総武快速線",
+        id: "soubu-rapid",
+        icon: "jr/jo",
+      },
+      {
+        name: "京葉線",
+        id: "keiyo",
+        icon: "jr/je",
+      },
+      {
+        name: "武蔵野線",
+        id: "musashino",
+        icon: "jr/jm",
+      },
+      {
         name: "総武本線",
         id: "soubu-honsen",
         icon: "jr/soubu-honsen",
@@ -211,6 +231,9 @@ stationForm.addEventListener("submit", (event) => {
   ).name;
   document.getElementById("result-station").textContent = stationName;
   document.getElementById("result-railway").textContent = railwayName;
+  document.getElementById(
+    "result-map"
+  ).src = `https://maps.google.co.jp/maps?output=embed&q=${stationName}`;
   document.getElementById("result").classList.remove("hidden");
   document
     .getElementById("tweet")
