@@ -447,6 +447,96 @@ const jrStations = {
       id: "abiko",
     },
   ],
+  "jr-soubu-honsen": [
+    {
+      name: "千葉",
+      id: "chiba",
+    },
+    {
+      name: "東千葉",
+      id: "higashi-chiba",
+    },
+    {
+      name: "都賀",
+      id: "tsuga",
+    },
+    {
+      name: "四街道",
+      id: "yotsukaidou",
+    },
+    {
+      name: "物井",
+      id: "monoi",
+    },
+    {
+      name: "佐倉",
+      id: "sakura",
+    },
+    {
+      name: "南酒々井",
+      id: "minami-shisui",
+    },
+    {
+      name: "榎戸",
+      id: "enokido",
+    },
+    {
+      name: "八街",
+      id: "yachimata",
+    },
+    {
+      name: "日向",
+      id: "hyuuga",
+    },
+    {
+      name: "成東",
+      id: "naruto",
+    },
+    {
+      name: "松尾",
+      id: "matsuo",
+    },
+    {
+      name: "横芝",
+      id: "yokoshiba",
+    },
+    {
+      name: "飯倉",
+      id: "iigura",
+    },
+    {
+      name: "八日市場",
+      id: "youkaichiba",
+    },
+    {
+      name: "干潟",
+      id: "higata",
+    },
+    {
+      name: "旭",
+      id: "asahi",
+    },
+    {
+      name: "飯岡",
+      id: "iioka",
+    },
+    {
+      name: "倉橋",
+      id: "kurahashi",
+    },
+    {
+      name: "猿田",
+      id: "saruda",
+    },
+    {
+      name: "松岸",
+      id: "matsugishi",
+    },
+    {
+      name: "銚子",
+      id: "choshi",
+    },
+  ],
 };
 
 Object.keys(jrStations).forEach((key) => {
