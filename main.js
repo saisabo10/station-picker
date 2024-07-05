@@ -126,6 +126,32 @@ const chibaRailways = {
       },
     ],
   },
+  toei: {
+    id: "toei",
+    name: "都営地下鉄",
+    railway: [
+      {
+        name: "浅草線",
+        id: "asakusa",
+        icon: "toei/a",
+      },
+      {
+        name: "三田線",
+        id: "mita",
+        icon: "toei/i",
+      },
+      {
+        name: "新宿線",
+        id: "shinjuku",
+        icon: "toei/s",
+      },
+      {
+        name: "大江戸線",
+        id: "oedo",
+        icon: "toei/e",
+      },
+    ],
+  },
   ks: {
     id: "ks",
     name: "京成電鉄",
