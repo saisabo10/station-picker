@@ -36,18 +36,4 @@ const toyoStations = [
     id: "toyo-katsutadai",
   },
 ];
-const toyoStationElement = document.getElementById("tr");
-let toyoStationElements = "";
-toyoStationElements += '<div class="ml-4 text-lg">';
-toyoStations.forEach((station) => {
-  toyoStationElements += stationTemplate(station, "tr");
-});
-toyoStationElements += "</div>";
-toyoStationElement.innerHTML += toyoStationElements;
-const toyoToggle = document.getElementById("tr-toggle");
-toyoToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll("#tr input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = toyoToggle.checked;
-  });
-});
+generateStations("tr", toyoStations);

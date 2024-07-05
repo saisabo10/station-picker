@@ -40,18 +40,4 @@ const choshiStations = [
     id: "tokawa",
   },
 ];
-const choshiStationElement = document.getElementById("cd");
-let choshiStationElements = "";
-choshiStationElements += '<div class="ml-4 text-lg">';
-choshiStations.forEach((station) => {
-  choshiStationElements += stationTemplate(station, "cd");
-});
-choshiStationElements += "</div>";
-choshiStationElement.innerHTML += choshiStationElements;
-const choshiToggle = document.getElementById("cd-toggle");
-choshiToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll("#cd input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = choshiToggle.checked;
-  });
-});
+generateStations("cd", choshiStations);

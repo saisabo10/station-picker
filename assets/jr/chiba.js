@@ -539,76 +539,386 @@ const jrStations = {
   ],
   "jr-keiyo": [
     {
-      name: "蘇我",
-      id: "soga",
-    },
-    {
-      name: "千葉みなと",
-      id: "chiba-minato",
-    },
-    {
-      name: "稲毛海岸",
-      id: "inagekaigan",
-    },
-    {
-      name: "検見川浜",
-      id: "kemigawahama",
-    },
-    {
-      name: "海浜幕張",
-      id: "kaihimmakuhari",
-    },
-    {
-      name: "幕張豊砂",
-      id: "makuhari-toyosuna",
-    },
-    {
-      name: "新習志野",
-      id: "shin-narashino",
-    },
-    {
-      name: "南船橋",
-      id: "minami-funabashi",
-    },
-    {
-      name: "二俣新町",
-      id: "futamatashinmachi",
-    },
-    {
-      name: "市川塩浜",
-      id: "ichikawashiohama",
-    },
-    {
-      name: "新浦安",
-      id: "shin-urayasu",
-    },
-    {
-      name: "舞浜",
-      id: "maihama",
-    },
-    {
-      name: "葛西臨海公園",
-      id: "kasairinkaikoen",
-    },
-    {
-      name: "新木場",
-      id: "shinkiba",
-    },
-    {
-      name: "潮見",
-      id: "shiomi",
-    },
-    {
-      name: "越中島",
-      id: "echujima",
+      name: "東京",
+      id: "tokyo",
     },
     {
       name: "八丁堀",
       id: "hatchobori",
     },
     {
+      name: "越中島",
+      id: "echujima",
+    },
+    {
+      name: "潮見",
+      id: "shiomi",
+    },
+    {
+      name: "新木場",
+      id: "shinkiba",
+    },
+    {
+      name: "葛西臨海公園",
+      id: "kasairinkaikoen",
+    },
+    {
+      name: "舞浜",
+      id: "maihama",
+    },
+    {
+      name: "新浦安",
+      id: "shin-urayasu",
+    },
+    {
+      name: "市川塩浜",
+      id: "ichikawashiohama",
+    },
+    {
+      name: "二俣新町",
+      id: "futamatashinmachi",
+    },
+    {
+      name: "南船橋",
+      id: "minami-funabashi",
+    },
+    {
+      name: "新習志野",
+      id: "shin-narashino",
+    },
+    {
+      name: "幕張豊砂",
+      id: "makuhari-toyosuna",
+    },
+    {
+      name: "海浜幕張",
+      id: "kaihimmakuhari",
+    },
+    {
+      name: "検見川浜",
+      id: "kemigawahama",
+    },
+    {
+      name: "稲毛海岸",
+      id: "inagekaigan",
+    },
+    {
+      name: "千葉みなと",
+      id: "chiba-minato",
+    },
+    {
+      name: "蘇我",
+      id: "soga",
+    },
+  ],
+  "jr-musashino": [
+    {
+      name: "南船橋",
+      id: "minami-funabashi",
+    },
+    {
+      name: "西船橋",
+      id: "nishi-funabashi",
+    },
+    {
+      name: "船橋法典",
+      id: "funabashi-houten",
+    },
+    {
+      name: "市川大野",
+      id: "ichikawa-ono",
+    },
+    {
+      name: "東松戸",
+      id: "higashi-matsudo",
+    },
+    {
+      name: "新八柱",
+      id: "shin-yahashira",
+    },
+    {
+      name: "新松戸",
+      id: "shin-matsudo",
+    },
+    {
+      name: "南流山",
+      id: "minami-nagareyama",
+    },
+    {
+      name: "三郷",
+      id: "misato",
+    },
+    {
+      name: "新三郷",
+      id: "shin-misato",
+    },
+    {
+      name: "吉川美南",
+      id: "yoshikawa-minami",
+    },
+    {
+      name: "吉川",
+      id: "yoshikawa",
+    },
+    {
+      name: "越谷レイクタウン",
+      id: "koshigaya-laketown",
+    },
+    {
+      name: "南越谷",
+      id: "minami-koshigaya",
+    },
+    {
+      name: "東川口",
+      id: "higashi-kawaguchi",
+    },
+    {
+      name: "東浦和",
+      id: "higashi-urawa",
+    },
+    {
+      name: "南浦和",
+      id: "minami-urawa",
+    },
+    {
+      name: "武蔵浦和",
+      id: "musashi-urawa",
+    },
+    {
+      name: "西浦和",
+      id: "nishi-urawa",
+    },
+    {
+      name: "北朝霞",
+      id: "kita-asaka",
+    },
+    {
+      name: "新座",
+      id: "niiza",
+    },
+    {
+      name: "東所沢",
+      id: "higashi-tokorozawa",
+    },
+    {
+      name: "新秋津",
+      id: "shin-akitsu",
+    },
+    {
+      name: "新小平",
+      id: "shin-kodaira",
+    },
+    {
+      name: "西国分寺",
+      id: "nishi-kokubunji",
+    },
+    {
+      name: "北府中",
+      id: "kita-fuchu",
+    },
+    {
+      name: "府中本町",
+      id: "fuchu-honmachi",
+    },
+  ],
+  "jr-soubu-rapid": [
+    {
       name: "東京",
       id: "tokyo",
+    },
+    {
+      name: "新日本橋",
+      id: "shin-nihonbashi",
+    },
+    {
+      name: "馬喰町",
+      id: "bakurocho",
+    },
+    {
+      name: "錦糸町",
+      id: "kinshicho",
+    },
+    {
+      name: "新小岩",
+      id: "shinkoiwa",
+    },
+    {
+      name: "市川",
+      id: "ichikawa",
+    },
+    {
+      name: "船橋",
+      id: "funabashi",
+    },
+    {
+      name: "津田沼",
+      id: "tsudanuma",
+    },
+    {
+      name: "稲毛",
+      id: "inage",
+    },
+    {
+      name: "千葉",
+      id: "chiba",
+    },
+  ],
+  "jr-soubu": [
+    {
+      name: "三鷹",
+      id: "mitaka",
+    },
+    {
+      name: "吉祥寺",
+      id: "kichijoji",
+    },
+    {
+      name: "西荻窪",
+      id: "nishi-ogikubo",
+    },
+    {
+      name: "荻窪",
+      id: "ogikubo",
+    },
+    {
+      name: "阿佐ヶ谷",
+      id: "asagaya",
+    },
+    {
+      name: "高円寺",
+      id: "kouenji",
+    },
+    {
+      name: "中野",
+      id: "nakano",
+    },
+    {
+      name: "東中野",
+      id: "higashi-nakano",
+    },
+    {
+      name: "大久保",
+      id: "ookubo",
+    },
+    {
+      name: "新宿",
+      id: "shinjuku",
+    },
+    {
+      name: "代々木",
+      id: "yoyogi",
+    },
+    {
+      name: "千駄ヶ谷",
+      id: "sendagaya",
+    },
+    {
+      name: "信濃町",
+      id: "shinano-machi",
+    },
+    {
+      name: "四ツ谷",
+      id: "yotsuya",
+    },
+    {
+      name: "市ヶ谷",
+      id: "ichigaya",
+    },
+    {
+      name: "飯田橋",
+      id: "iidabashi",
+    },
+    {
+      name: "水道橋",
+      id: "suidobashi",
+    },
+    {
+      name: "御茶ノ水",
+      id: "ochanomizu",
+    },
+    {
+      name: "秋葉原",
+      id: "akihabara",
+    },
+    {
+      name: "浅草橋",
+      id: "asakusabashi",
+    },
+    {
+      name: "両国",
+      id: "ryogoku",
+    },
+    {
+      name: "錦糸町",
+      id: "kinshicho",
+    },
+    {
+      name: "亀戸",
+      id: "kameido",
+    },
+    {
+      name: "平井",
+      id: "hirai",
+    },
+    {
+      name: "新小岩",
+      id: "shin-koiwa",
+    },
+    {
+      name: "小岩",
+      id: "koiwa",
+    },
+    {
+      name: "市川",
+      id: "ichikawa",
+    },
+    {
+      name: "本八幡",
+      id: "moto-yawata",
+    },
+    {
+      name: "下総中山",
+      id: "shimousa-nakayama",
+    },
+    {
+      name: "西船橋",
+      id: "nishi-funabashi",
+    },
+    {
+      name: "船橋",
+      id: "funabashi",
+    },
+    {
+      name: "東船橋",
+      id: "higashi-funabashi",
+    },
+    {
+      name: "津田沼",
+      id: "tsudanuma",
+    },
+    {
+      name: "幕張本郷",
+      id: "makuharihongo",
+    },
+    {
+      name: "幕張",
+      id: "makuhari",
+    },
+    {
+      name: "新検見川",
+      id: "shin-kemigawa",
+    },
+    {
+      name: "稲毛",
+      id: "inage",
+    },
+    {
+      name: "西千葉",
+      id: "nishi-chiba",
+    },
+    {
+      name: "千葉",
+      id: "chiba",
     },
   ],
 };

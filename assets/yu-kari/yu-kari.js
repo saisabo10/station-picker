@@ -24,20 +24,4 @@ const yukariStations = [
     id: "ino",
   },
 ];
-const yukariStationElement = document.getElementById("yu-kari");
-let yukariStationElements = "";
-yukariStationElements += '<div class="ml-4 text-lg">';
-yukariStations.forEach((station) => {
-  yukariStationElements += stationTemplate(station, "yu-kari");
-});
-yukariStationElements += "</div>";
-yukariStationElement.innerHTML += yukariStationElements;
-const yukariToggle = document.getElementById("yu-kari-toggle");
-yukariToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll(
-    "#yu-kari input[type='checkbox']"
-  );
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = yukariToggle.checked;
-  });
-});
+generateStations("yu-kari", yukariStations);

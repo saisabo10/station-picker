@@ -60,18 +60,4 @@ const hokusoLineStations = [
     id: "inba-nihon-idai",
   },
 ];
-const hoksoStationElement = document.getElementById("hs");
-let hoksoStationElements = "";
-hoksoStationElements += '<div class="ml-4 text-lg">';
-hokusoLineStations.forEach((station) => {
-  hoksoStationElements += stationTemplate(station, "hs");
-});
-hoksoStationElements += "</div>";
-hoksoStationElement.innerHTML += hoksoStationElements;
-const hoksoToggle = document.getElementById("hs-toggle");
-hoksoToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll("#hs input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = hoksoToggle.checked;
-  });
-});
+generateStations("hs", hokusoLineStations);

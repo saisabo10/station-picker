@@ -56,18 +56,4 @@ const isumiLineStations = [
     id: "kazusa-nakano",
   },
 ];
-const isumiStationElement = document.getElementById("is");
-let isumiStationElements = "";
-isumiStationElements += '<div class="ml-4 text-lg">';
-isumiLineStations.forEach((station) => {
-  isumiStationElements += stationTemplate(station, "is");
-});
-isumiStationElements += "</div>";
-isumiStationElement.innerHTML += isumiStationElements;
-const isumiToggle = document.getElementById("is-toggle");
-isumiToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll("#is input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = isumiToggle.checked;
-  });
-});
+generateStations("is", isumiLineStations);

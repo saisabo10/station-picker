@@ -72,18 +72,4 @@ const kominatoRailwayLineStations = [
     id: "kazusa-nakano",
   },
 ];
-const kominatoStationElement = document.getElementById("km");
-let kominatoStationElements = "";
-kominatoStationElements += '<div class="ml-4 text-lg">';
-kominatoRailwayLineStations.forEach((station) => {
-  kominatoStationElements += stationTemplate(station, "km");
-});
-kominatoStationElements += "</div>";
-kominatoStationElement.innerHTML += kominatoStationElements;
-const kominatoToggle = document.getElementById("km-toggle");
-kominatoToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll("#km input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = kominatoToggle.checked;
-  });
-});
+generateStations("km", kominatoRailwayLineStations);

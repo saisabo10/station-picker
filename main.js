@@ -70,6 +70,62 @@ const chibaRailways = {
       },
     ],
   },
+  "tokyo-metro": {
+    id: "tokyo-metro",
+    name: "東京メトロ",
+    railway: [
+      {
+        name: "銀座線",
+        id: "ginza",
+        icon: "tokyo-metro/g",
+      },
+      {
+        name: "丸ノ内線",
+        id: "marunouchi",
+        icon: "tokyo-metro/m",
+      },
+      {
+        name: "丸ノ内分岐線",
+        id: "marunouchi-bunki",
+        icon: "tokyo-metro/mb",
+      },
+      {
+        name: "日比谷線",
+        id: "hibiya",
+        icon: "tokyo-metro/h",
+      },
+      {
+        name: "東西線",
+        id: "tozai",
+        icon: "tokyo-metro/t",
+      },
+      {
+        name: "千代田線",
+        id: "chiyoda",
+        icon: "tokyo-metro/c",
+      },
+      {
+        name: "有楽町線",
+        id: "yurakucho",
+        icon: "tokyo-metro/y",
+      },
+      {
+        name: "半蔵門線",
+        id: "hanzomon",
+        icon: "tokyo-metro/z",
+      },
+      {
+        name: "南北線",
+        id: "namboku",
+        icon: "tokyo-metro/n",
+      },
+      {
+        name: "副都心線",
+        id: "fukutoshin",
+        icon: "tokyo-metro/f",
+      },
+    ],
+  },
   ks: {
     id: "ks",
     name: "京成電鉄",
@@ -261,6 +317,16 @@ Object.keys(chibaRailways).forEach((key) => {
   }
 });
 
+const kantoToggle = document.getElementById("kanto-toggle");
+kantoToggle.addEventListener("click", () => {
+  const kanto = document.getElementById("kanto");
+
+  const checkboxes = kanto.querySelectorAll("input[type=checkbox]");
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = kantoToggle.checked;
+  });
+});
+
 const chibaToggle = document.getElementById("chiba-toggle");
 chibaToggle.addEventListener("click", () => {
   const chiba = document.getElementById("chiba");
@@ -308,7 +374,7 @@ stationForm.addEventListener("submit", (event) => {
   document.getElementById("result-railway").textContent = railwayName;
   document.getElementById(
     "result-map"
-  ).src = `https://maps.google.co.jp/maps?output=embed&q=${stationName}`;
+  ).src = `https://maps.google.co.jp/maps?output=embed&q=${railwayName}%20${stationName}`;
   document.getElementById("result").classList.remove("hidden");
   document
     .getElementById("tweet")
@@ -354,6 +420,9 @@ document.getElementById("retry-same").addEventListener("click", () => {
   ).name;
   document.getElementById("result-station").textContent = stationName;
   document.getElementById("result-railway").textContent = railwayName;
+  document.getElementById(
+    "result-map"
+  ).src = `https://maps.google.co.jp/maps?output=embed&q=${railwayName}%20${stationName}`;
   document
     .getElementById("tweet")
     .addEventListener("click", () => tweet(railwayName, stationName));
@@ -362,3 +431,23 @@ document.getElementById("retry-same").addEventListener("click", () => {
 document.getElementById("retry").addEventListener("click", () => {
   document.getElementById("result").classList.add("hidden");
 });
+
+const generateStations = (railway, stations) => {
+  const stationElement = document.getElementById(railway);
+  let stationElements = "";
+  stationElements += '<div class="ml-4 text-lg">';
+  stations.forEach((station) => {
+    stationElements += stationTemplate(station, "tr");
+  });
+  stationElements += "</div>";
+  stationElement.innerHTML += stationElements;
+  const toggle = document.getElementById(railway + "-toggle");
+  toggle.addEventListener("click", () => {
+    const checkboxes = document.querySelectorAll(
+      `${railway} input[type='checkbox']`
+    );
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = toggle.checked;
+    });
+  });
+};

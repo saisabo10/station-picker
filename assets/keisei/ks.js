@@ -1,6 +1,26 @@
 const keiseiStations = {
   "ks-narita-skyaccess": [
     {
+      name: "京成高砂",
+      id: "keisei-takasago",
+    },
+    {
+      name: "東松戸",
+      id: "higashi-matsudo",
+    },
+    {
+      name: "新鎌ヶ谷",
+      id: "shinkamagaya",
+    },
+    {
+      name: "千葉ニュータウン中央",
+      id: "chiba-newtown-chuo",
+    },
+    {
+      name: "印旛日本医大",
+      id: "inba-nihon-idai",
+    },
+    {
       name: "成田湯川",
       id: "narita-yukawa",
     },
