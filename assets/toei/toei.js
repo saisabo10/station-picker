@@ -82,7 +82,92 @@ const toeiStations = {
     },
   ],
   "toei-mita": [],
-  "toei-shinjuku": [],
+  "toei-shinjuku": [
+    {
+      name: "新宿",
+      id: "shinjuku",
+    },
+    {
+      name: "新宿三丁目",
+      id: "shinjuku-sanchome",
+    },
+    {
+      name: "曙橋",
+      id: "akebonobashi",
+    },
+    {
+      name: "市ヶ谷",
+      id: "ichigaya",
+    },
+    {
+      name: "九段下",
+      id: "kudanshita",
+    },
+    {
+      name: "神保町",
+      id: "jimbocho",
+    },
+    {
+      name: "小川町",
+      id: "ogawamachi",
+    },
+    {
+      name: "岩本町",
+      id: "iwamotocho",
+    },
+    {
+      name: "馬喰横山",
+      id: "bakuroyokoyama",
+    },
+    {
+      name: "浜町",
+      id: "hamacho",
+    },
+    {
+      name: "森下",
+      id: "morishita",
+    },
+    {
+      name: "菊川",
+      id: "kikukawa",
+    },
+    {
+      name: "住吉",
+      id: "sumiyoshi",
+    },
+    {
+      name: "西大島",
+      id: "nishi-ojima",
+    },
+    {
+      name: "大島",
+      id: "ojima",
+    },
+    {
+      name: "東大島",
+      id: "higashi-ojima",
+    },
+    {
+      name: "船堀",
+      id: "funabori",
+    },
+    {
+      name: "一之江",
+      id: "ichinoe",
+    },
+    {
+      name: "瑞江",
+      id: "mizue",
+    },
+    {
+      name: "篠崎",
+      id: "shinozaki",
+    },
+    {
+      name: "本八幡",
+      id: "motoyawata",
+    },
+  ],
   "toei-ooedo": [],
 };
 
