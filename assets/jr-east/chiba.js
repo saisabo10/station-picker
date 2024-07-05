@@ -1,5 +1,5 @@
-const jrStations = {
-  "jr-uchibo": [
+const jrChibaStations = {
+  "jr-east-uchibo": [
     {
       name: "蘇我",
       id: "soga",
@@ -121,7 +121,7 @@ const jrStations = {
       id: "awa-kamogawa",
     },
   ],
-  "jr-sotobo": [
+  "jr-east-sotobo": [
     {
       name: "千葉",
       id: "chiba",
@@ -231,7 +231,7 @@ const jrStations = {
       id: "awa-kamogawa",
     },
   ],
-  "jr-kururi": [
+  "jr-east-kururi": [
     {
       name: "木更津",
       id: "kisarazu",
@@ -289,7 +289,7 @@ const jrStations = {
       id: "kazusa-kameyama",
     },
   ],
-  "jr-togane": [
+  "jr-east-togane": [
     {
       name: "大網",
       id: "oami",
@@ -311,7 +311,7 @@ const jrStations = {
       id: "naruto",
     },
   ],
-  "jr-kashima": [
+  "jr-east-kashima": [
     {
       name: "香取",
       id: "katori",
@@ -333,7 +333,7 @@ const jrStations = {
       id: "kashima-jingu",
     },
   ],
-  "jr-narita": [
+  "jr-east-narita": [
     {
       name: "佐倉",
       id: "sakura",
@@ -399,7 +399,7 @@ const jrStations = {
       id: "matsugishi",
     },
   ],
-  "jr-narita-kuko": [
+  "jr-east-narita-kuko": [
     {
       name: "空港第2ビル（成田第2・第3ターミナル）",
       id: "narita-airport-terminal-2-3",
@@ -409,7 +409,7 @@ const jrStations = {
       id: "narita-airport-terminal-1",
     },
   ],
-  "jr-narita-abiko": [
+  "jr-east-narita-abiko": [
     {
       name: "下総松崎",
       id: "shimousa-manzaki",
@@ -447,7 +447,7 @@ const jrStations = {
       id: "abiko",
     },
   ],
-  "jr-soubu-honsen": [
+  "jr-east-soubu-honsen": [
     {
       name: "千葉",
       id: "chiba",
@@ -537,7 +537,7 @@ const jrStations = {
       id: "choshi",
     },
   ],
-  "jr-keiyo": [
+  "jr-east-keiyo": [
     {
       name: "東京",
       id: "tokyo",
@@ -611,7 +611,7 @@ const jrStations = {
       id: "soga",
     },
   ],
-  "jr-musashino": [
+  "jr-east-musashino": [
     {
       name: "南船橋",
       id: "minami-funabashi",
@@ -721,7 +721,7 @@ const jrStations = {
       id: "fuchu-honmachi",
     },
   ],
-  "jr-soubu-rapid": [
+  "jr-east-soubu-rapid": [
     {
       name: "東京",
       id: "tokyo",
@@ -763,7 +763,7 @@ const jrStations = {
       id: "chiba",
     },
   ],
-  "jr-soubu": [
+  "jr-east-soubu": [
     {
       name: "三鷹",
       id: "mitaka",
@@ -923,4 +923,4 @@ const jrStations = {
   ],
 };
 
-generateRailwayStations("jr", jrStations);
+generateRailwayStations("jr-east", jrChibaStations);

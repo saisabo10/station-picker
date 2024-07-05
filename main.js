@@ -1,72 +1,107 @@
-const chibaRailways = {
-  jr: {
-    id: "jr",
+const kantoRailways = {
+  "jr-east": {
+    id: "jr-east",
     name: "JR東日本",
     railway: [
       {
-        name: "総武線",
+        name: "山手線",
+        id: "yamanote",
+        icon: "jr-east/jy",
+      },
+      {
+        name: "京浜東北線",
+        id: "keihin-tohoku",
+        icon: "jr-east/jk",
+      },
+      {
+        name: "東海道線",
+        id: "tokaido",
+        icon: "jr-east/jo",
+      },
+      {
+        name: "中央線快速",
+        id: "chuo-rapid",
+        icon: "jr-east/jc",
+      },
+      {
+        name: "五日市線",
+        id: "itsukaichi",
+        icon: "jr-east/jc",
+      },
+      {
+        name: "青梅線",
+        id: "oume",
+        icon: "jr-east/jc",
+      },
+      {
+        name: "中央・総武各駅停車",
         id: "soubu",
-        icon: "jr/jb",
+        icon: "jr-east/jb",
       },
       {
         name: "総武快速線",
         id: "soubu-rapid",
-        icon: "jr/jo",
+        icon: "jr-east/jo",
       },
       {
         name: "京葉線",
         id: "keiyo",
-        icon: "jr/je",
+        icon: "jr-east/je",
       },
       {
         name: "武蔵野線",
         id: "musashino",
-        icon: "jr/jm",
+        icon: "jr-east/jm",
+      },
+      {
+        name: "八高線",
+        id: "hachiko",
+        icon: "jr-east/hachiko",
       },
       {
         name: "総武本線",
         id: "soubu-honsen",
-        icon: "jr/soubu-honsen",
+        icon: "jr-east/soubu-honsen",
       },
       {
         name: "成田線",
         id: "narita",
-        icon: "jr/narita",
+        icon: "jr-east/narita",
       },
       {
         name: "成田線（空港支線）",
         id: "narita-kuko",
-        icon: "jr/narita",
+        icon: "jr-east/narita",
       },
       {
         name: "成田線（我孫子支線）",
         id: "narita-abiko",
-        icon: "jr/narita",
+        icon: "jr-east/narita",
       },
       {
         name: "内房線",
         id: "uchibo",
-        icon: "jr/uchibo",
+        icon: "jr-east/uchibo",
       },
       {
         name: "東金線",
         id: "togane",
-        icon: "jr/togane",
+        icon: "jr-east/togane",
       },
       {
         name: "外房線",
         id: "sotobo",
-        icon: "jr/sotobo",
+        icon: "jr-east/sotobo",
       },
       {
         name: "久留里線",
         id: "kururi",
-        icon: "jr/kururi",
+        icon: "jr-east/kururi",
       },
       {
         name: "鹿島線",
         id: "kashima",
-        icon: "jr/kashima",
+        icon: "jr-east/kashima",
       },
     ],
   },
@@ -331,7 +366,7 @@ const chibaRailways = {
   },
 };
 
-const flattenChibaRailways = Object.values(chibaRailways).flatMap((railway) => {
+const flattenKantoRailways = Object.values(kantoRailways).flatMap((railway) => {
   if (railway.railway.length === 1 && railway.id !== "tb") {
     return railway.railway.map((station) => ({
       id: station.id,
@@ -362,8 +397,8 @@ const stationTemplate = (station, key) => `
       </div>
     `;
 
-Object.keys(chibaRailways).forEach((key) => {
-  const railway = chibaRailways[key];
+Object.keys(kantoRailways).forEach((key) => {
+  const railway = kantoRailways[key];
   if (railway.railway.length !== 1 || railway.id === "tb") {
     const railwayElement = document.getElementById(key);
     let railwayElements = "";
@@ -426,7 +461,7 @@ stationForm.addEventListener("submit", (event) => {
   }
   const random = Math.floor(Math.random() * stationNamesArray.length);
   const stationName = stationNamesArray[random].name + "駅";
-  const railwayName = flattenChibaRailways.find(
+  const railwayName = flattenKantoRailways.find(
     (railway) => railway.id === stationNamesArray[random].railway
   ).name;
   document.getElementById("result-station").textContent = stationName;
@@ -474,7 +509,7 @@ document.getElementById("retry-same").addEventListener("click", () => {
   }
   const random = Math.floor(Math.random() * stationNamesArray.length);
   const stationName = stationNamesArray[random].name + "駅";
-  const railwayName = flattenChibaRailways.find(
+  const railwayName = flattenKantoRailways.find(
     (railway) => railway.id === stationNamesArray[random].railway
   ).name;
   document.getElementById("result-station").textContent = stationName;
@@ -519,6 +554,10 @@ const generateRailwayStations = (railway, railwayStations) => {
   Object.keys(railwayStations).forEach((key) => {
     const stations = railwayStations[key];
     const stationElement = document.getElementById(key);
+    if (stations.length === 0 && stationElement) {
+      stationElement.remove();
+      return;
+    }
     let stationElements = "";
     stationElements += '<div class="ml-4 text-lg">';
     stations.forEach((station) => {
