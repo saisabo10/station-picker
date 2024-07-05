@@ -147,8 +147,41 @@ const chibaRailways = {
       },
       {
         name: "大江戸線",
-        id: "oedo",
+        id: "ooedo",
         icon: "toei/e",
+      },
+    ],
+  },
+  rinkai: {
+    id: "rinkai",
+    name: "りんかい線",
+    railway: [
+      {
+        name: "りんかい線",
+        id: "rinkai",
+        icon: "rinkai/rinkai",
+      },
+    ],
+  },
+  "tokyo-monorail": {
+    id: "tokyo-monorail",
+    name: "東京モノレール",
+    railway: [
+      {
+        name: "東京モノレール",
+        id: "tokyo-monorail",
+        icon: "tokyo-monorail/mo",
+      },
+    ],
+  },
+  yurikamome: {
+    id: "yurikamome",
+    name: "ゆりかもめ",
+    railway: [
+      {
+        name: "ゆりかもめ",
+        id: "yurikamome",
+        icon: "yurikamome/u",
       },
     ],
   },
@@ -458,22 +491,50 @@ document.getElementById("retry").addEventListener("click", () => {
   document.getElementById("result").classList.add("hidden");
 });
 
-const generateStations = (railway, stations) => {
-  const stationElement = document.getElementById(railway);
-  let stationElements = "";
-  stationElements += '<div class="ml-4 text-lg">';
-  stations.forEach((station) => {
-    stationElements += stationTemplate(station, "tr");
-  });
-  stationElements += "</div>";
-  stationElement.innerHTML += stationElements;
+const setToggle = (railway) => {
   const toggle = document.getElementById(railway + "-toggle");
   toggle.addEventListener("click", () => {
     const checkboxes = document.querySelectorAll(
-      `${railway} input[type='checkbox']`
+      `#${railway} input[type='checkbox']`
     );
     checkboxes.forEach((checkbox) => {
       checkbox.checked = toggle.checked;
     });
   });
+};
+
+const generateStations = (railway, stations) => {
+  const stationElement = document.getElementById(railway);
+  let stationElements = "";
+  stationElements += '<div class="ml-4 text-lg">';
+  stations.forEach((station) => {
+    stationElements += stationTemplate(station, railway);
+  });
+  stationElements += "</div>";
+  stationElement.innerHTML += stationElements;
+  setToggle(railway);
+};
+
+const generateRailwayStations = (railway, railwayStations) => {
+  Object.keys(railwayStations).forEach((key) => {
+    const stations = railwayStations[key];
+    const stationElement = document.getElementById(key);
+    let stationElements = "";
+    stationElements += '<div class="ml-4 text-lg">';
+    stations.forEach((station) => {
+      stationElements += stationTemplate(station, key);
+    });
+    stationElements += "</div>";
+    stationElement.innerHTML += stationElements;
+    const stationToggle = document.getElementById(`${key}-toggle`);
+    stationToggle.addEventListener("click", (event) => {
+      const checkboxes = document.querySelectorAll(
+        `#${key} input[type="checkbox"]`
+      );
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = event.target.checked;
+      });
+    });
+  });
+  setToggle(railway);
 };

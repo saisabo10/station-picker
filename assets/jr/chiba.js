@@ -923,30 +923,4 @@ const jrStations = {
   ],
 };
 
-Object.keys(jrStations).forEach((key) => {
-  const stations = jrStations[key];
-  const stationElement = document.getElementById(key);
-  let stationElements = "";
-  stationElements += '<div class="ml-4 text-lg">';
-  stations.forEach((station) => {
-    stationElements += stationTemplate(station, key);
-  });
-  stationElements += "</div>";
-  stationElement.innerHTML += stationElements;
-  const stationToggle = document.getElementById(`${key}-toggle`);
-  stationToggle.addEventListener("click", (event) => {
-    const checkboxes = document.querySelectorAll(
-      `#${key} input[type="checkbox"]`
-    );
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = event.target.checked;
-    });
-  });
-});
-const jrToggle = document.getElementById("jr-toggle");
-jrToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll("#jr input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = jrToggle.checked;
-  });
-});
+generateRailwayStations("jr", jrStations);

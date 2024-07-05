@@ -430,30 +430,5 @@ const keiseiStations = {
     },
   ],
 };
-Object.keys(keiseiStations).forEach((key) => {
-  const stations = keiseiStations[key];
-  const stationElement = document.getElementById(key);
-  let stationElements = "";
-  stationElements += '<div class="ml-4 text-lg">';
-  stations.forEach((station) => {
-    stationElements += stationTemplate(station, key);
-  });
-  stationElements += "</div>";
-  stationElement.innerHTML += stationElements;
-  const stationToggle = document.getElementById(`${key}-toggle`);
-  stationToggle.addEventListener("click", (event) => {
-    const checkboxes = document.querySelectorAll(
-      `#${key} input[type="checkbox"]`
-    );
-    checkboxes.forEach((checkbox) => {
-      checkbox.checked = event.target.checked;
-    });
-  });
-});
-const ksToggle = document.getElementById("ks-toggle");
-ksToggle.addEventListener("click", () => {
-  const checkboxes = document.querySelectorAll("#ks input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = ksToggle.checked;
-  });
-});
+
+generateRailwayStations("ks", keiseiStations);
