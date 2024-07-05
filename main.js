@@ -599,3 +599,36 @@ const generateRailwayStations = (railway, railwayStations) => {
   });
   setToggle(railway);
 };
+
+const kantoScripts = [
+  "jr-east/tokyo",
+  "jr-east/chiba",
+  "tokyo-metro/tokyo-metro",
+  "tobu/chiba",
+  "keisei/ks",
+  "toei/toei",
+  "rinkai/rinkai",
+  "tokyo-monorail/tokyo-monorail",
+  "yurikamome/yurikamome",
+  "tama-monorail/tama-monorail",
+  "hokso/hs",
+  "cm/cm",
+  "yu-kari/yu-kari",
+  "kominato/kominato",
+  "isumi/isumi",
+  "toyo/toyo",
+  "choshi/choshi",
+  "tx/tx",
+];
+
+for (const script of kantoScripts) {
+  const scriptElement = document.createElement("script");
+  scriptElement.src = `assets/${script}.js`;
+  scriptElement.onload = () => {
+    const railwayStations = window[script.replace(/-|\/|\.|/g, "_")];
+    if (railwayStations) {
+      generateRailwayStations(script, railwayStations);
+    }
+  };
+  document.body.appendChild(scriptElement);
+}
