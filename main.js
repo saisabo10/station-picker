@@ -380,6 +380,17 @@ const kantoRailways = {
       },
     ],
   },
+  ryutetsu: {
+    id: "ryutetsu",
+    name: "流鉄流山線",
+    railway: [
+      {
+        name: "流鉄流山線",
+        id: "ryutetsu",
+        icon: "ryutetsu/rn",
+      },
+    ],
+  },
   tx: {
     id: "tx",
     name: "つくばエクスプレス",
@@ -624,6 +635,7 @@ const kantoScripts = [
   "isumi/isumi",
   "toyo/toyo",
   "choshi/choshi",
+  "ryutetsu/ryutetsu",
   "tx/tx",
 ];
 
