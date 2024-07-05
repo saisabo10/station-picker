@@ -307,6 +307,11 @@ const kantoRailways = {
         id: "noda",
         icon: "tobu/td",
       },
+      {
+        name: "東上線",
+        id: "tojo",
+        icon: "tobu/tj",
+      },
     ],
   },
   hs: {
@@ -605,6 +610,7 @@ const kantoScripts = [
   "jr-east/chiba",
   "tokyo-metro/tokyo-metro",
   "tobu/chiba",
+  "tobu/saitama",
   "keisei/ks",
   "toei/toei",
   "rinkai/rinkai",

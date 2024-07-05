@@ -1,4 +1,4 @@
-const tobuStations = {
+const tobuChibaStations = {
   "tb-noda": [
     {
       name: "船橋",
@@ -143,4 +143,4 @@ const tobuStations = {
   ],
 };
 
-generateRailwayStations("tb", tobuStations);
+generateRailwayStations("tb", tobuChibaStations);

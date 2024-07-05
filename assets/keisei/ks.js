@@ -3,34 +3,42 @@ const keiseiStations = {
     {
       name: "京成高砂",
       id: "keisei-takasago",
+      furigana: "けいせいたかさご",
     },
     {
       name: "東松戸",
       id: "higashi-matsudo",
+      furigana: "ひがしまつど",
     },
     {
       name: "新鎌ヶ谷",
       id: "shinkamagaya",
+      furigana: "しんかまがや",
     },
     {
       name: "千葉ニュータウン中央",
       id: "chiba-newtown-chuo",
+      furigana: "ちばにゅーたうんちゅうおう",
     },
     {
       name: "印旛日本医大",
       id: "inba-nihon-idai",
+      furigana: "いんばにほんいだい",
     },
     {
       name: "成田湯川",
       id: "narita-yukawa",
+      furigana: "なりたゆかわ",
     },
     {
       name: "空港第2ビル（成田第2・第3ターミナル）",
       id: "narita-airport-terminal-2-3",
+      furigana: "くうこうだいにびる",
     },
     {
       name: "成田空港（成田第1ターミナル）",
       id: "narita-airport-terminal-1",
+      furigana: "なりたくうこう",
     },
   ],
   "ks-shin-keisei": [
@@ -371,7 +379,7 @@ const keiseiStations = {
       id: "nishi-nobuto",
     },
     {
-      name: "深千葉",
+      name: "新千葉",
       id: "shin-chiba",
     },
     {
