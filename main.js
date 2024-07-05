@@ -220,6 +220,17 @@ const kantoRailways = {
       },
     ],
   },
+  "tama-monorail": {
+    id: "tama-monorail",
+    name: "多摩都市モノレール",
+    railway: [
+      {
+        name: "多摩都市モノレール",
+        id: "tama-monorail",
+        icon: "tama-monorail/tt",
+      },
+    ],
+  },
   ks: {
     id: "ks",
     name: "京成電鉄",
@@ -361,6 +372,17 @@ const kantoRailways = {
         name: "銚子電気鉄道線",
         id: "cd",
         icon: "cd/cd",
+      },
+    ],
+  },
+  tx: {
+    id: "tx",
+    name: "つくばエクスプレス",
+    railway: [
+      {
+        name: "つくばエクスプレス",
+        id: "tx",
+        icon: "tx/tx",
       },
     ],
   },
