@@ -1,5 +1,4 @@
-const ryutetsuStations = {
-  "ryutetsu-line": [
+const ryutetsuStations = [
     { 
       name: "馬橋",
       id: "mabashi",
@@ -24,7 +23,6 @@ const ryutetsuStations = {
       name: "流山",
       id: "nagareyama",
     },
-  ],
-};
+  ];
 
-generateRailwayStations("ryutetsu", ryutetsuStations);
+generateStations("ryutetsu", ryutetsuStations);
